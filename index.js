@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { saveTask, getTasks,onGetTasks,deleteTasks,getTask, updateTask } from './firebase.js'
 
 const taskForm = document.getElementById('task-form')
@@ -54,12 +55,22 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     })   
 })
+=======
+import {saveTask} from './firebase.js'
+
+window.addEventListener('DomContentLoaded', () => {
+    
+})
+
+const taskForm = document.getElementById('task-form')
+>>>>>>> 21741e3f9e6d193de7d1c64ff223c2dd99e783e1
 
 taskForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const title = taskForm['task-title']
     const description = taskForm['task-description']
+<<<<<<< HEAD
     
     if(!editStatus){
         saveTask(title.value, description.value)
@@ -74,4 +85,8 @@ taskForm.addEventListener('submit', (e) => {
     
     taskForm.reset()
 
+=======
+
+    saveTask(title.value, description.value)
+>>>>>>> 21741e3f9e6d193de7d1c64ff223c2dd99e783e1
 })
